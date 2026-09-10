@@ -1,9 +1,6 @@
 flows:
   - "tests/**"
-notifications:
-  email:
-    enabled: true
-    recipients: ["hatem.hatamleh@gmail.com"]
-  slack:
-    enabled: true
-    channels: ["qa-channel"]
+
+platform:
+  android:
+    disableAnimations: true

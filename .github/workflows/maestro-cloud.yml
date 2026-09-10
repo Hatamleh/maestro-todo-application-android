@@ -1,0 +1,20 @@
+name: E2E cloud
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  maestro-cloud:
+    name: Run flows on Maestro cloud
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the app under test
+        env:
+          APP_APK_URL: https://github.com/Hatamleh/maestro-todo-application-android/releases/download/Production/QAcart-Todo.apk
+        run: |
+          curl -sSL --fail "$APP_APK_URL" -o app-release.apk  
+          ls -lh app-release.apk
