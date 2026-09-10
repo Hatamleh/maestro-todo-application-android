@@ -26,4 +26,4 @@ jobs:
           app-file: app-release.apk
           workspace: .
           device-model: pixel_9
-          device_os: android-35
+          device-os: android-35
