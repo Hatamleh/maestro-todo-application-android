@@ -1,0 +1,40 @@
+appId: com.qacart.todo_app
+---
+- launchApp:
+    clearState: true
+- runFlow: 
+    label: "Login flow"
+    file: "../../flows/auth/login-flow.yaml"
+    env:
+        EMAIL: "user@qacart.com"
+        PASSWORD: "Test@1234"
+- assertVisible:
+    id: "plan_name"
+    text: "Free plan"
+- runFlow: 
+    label: "Add new Todo"
+    file: "../../flows/todos/add-todo-flow.yaml"
+    env: 
+        TODO_TEXT: "Learn Maestro1"
+        TODO_INDEX: 0
+- runFlow: 
+    label: "Add new Todo"
+    file: "../../flows/todos/add-todo-flow.yaml"
+    env: 
+        TODO_TEXT: "Learn Maestro2"
+        TODO_INDEX: 1
+- runFlow: 
+    label: "Add new Todo"
+    file: "../../flows/todos/add-todo-flow.yaml"
+    env: 
+        TODO_TEXT: "Learn Maestro3"
+        TODO_INDEX: 2
+- assertVisible:
+    id: "plan_usage"
+    text: "3 / 3"
+- assertVisible:
+    id: "add_todo_button"
+    enabled: false
+
+
+

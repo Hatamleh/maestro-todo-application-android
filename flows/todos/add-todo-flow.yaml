@@ -1,0 +1,10 @@
+appId: com.qacart.todo_app
+---
+- tapOn:
+    id: "new_todo_field"
+- inputText: "${TODO_TEXT}"
+- tapOn:
+    id: "add_todo_button"
+- assertVisible:
+    id: "todo_title_${TODO_INDEX}"
+    text: "${TODO_TEXT}"

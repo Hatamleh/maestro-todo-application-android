@@ -1,0 +1,14 @@
+appId: com.qacart.todo_app
+---
+- runScript: "../../scripts/utils.js"
+- tapOn:
+    id: "auth_toggle_mode_button"
+- tapOn:
+    id: "auth_email_field"
+- inputText: "${output.email}"
+- tapOn:
+    id: "auth_password_field"
+- inputText: "${PASSWORD}"
+- hideKeyboard
+- tapOn:
+    id: "auth_submit_button"

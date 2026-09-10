@@ -1,0 +1,12 @@
+appId: com.qacart.todo_app
+---
+- tapOn:
+    id: "upgrade_button"
+- tapOn:
+    id: "terms_checkbox"
+- tapOn:
+    id: "plan_dropdown"
+- tapOn:
+    id: "plan_option_${PLAN_INDEX}"
+- tapOn:
+    id: "upgrade_confirm_button"

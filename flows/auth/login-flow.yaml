@@ -1,0 +1,11 @@
+appId: com.qacart.todo_app
+---
+- tapOn:
+      id: "auth_email_field"
+- inputText: "${EMAIL}"
+- tapOn:
+      id: "auth_password_field"
+- inputText: "${PASSWORD}"
+- hideKeyboard
+- tapOn:
+      id: "auth_submit_button"

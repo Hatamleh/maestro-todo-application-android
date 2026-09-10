@@ -1,0 +1,14 @@
+appId: com.qacart.todo_app
+name: "should be able to login to application"
+---
+- launchApp:
+      clearState: true
+- runFlow:
+      label: "Login flow"
+      file: "../../flows/auth/login-flow.yaml"
+      env:
+          EMAIL: "user@qacart.com"
+          PASSWORD: "Test@1234"
+- assertVisible:
+      id: "plan_name"
+      text: "Free plan"

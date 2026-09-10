@@ -1,0 +1,34 @@
+appId: com.qacart.todo_app
+---
+- launchApp:
+    clearState: true
+- runFlow: 
+    label: "Login flow"
+    file: "../../flows/auth/login-flow.yaml"
+    env:
+        EMAIL: "user@qacart.com"
+        PASSWORD: "Test@1234"
+- assertVisible:
+    id: "plan_name"
+    text: "Free plan"
+- tapOn:
+    id: "upgrade_button"
+- tapOn:
+    id: "terms_checkbox"
+- tapOn:
+    id: "plan_dropdown"
+- tapOn:
+    id: "plan_option_5"
+- tapOn:
+    id: "upgrade_confirm_button"
+- assertVisible:
+    id: "plan_name"
+    text: "Starter plan"
+- tapOn:
+    id: "cancel_subscription_button"
+- tapOn:
+    id: "cancel_subscription_confirm_button"
+- assertVisible:
+    id: "plan_name"
+    text: "Free plan"
+
