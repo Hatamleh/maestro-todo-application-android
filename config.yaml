@@ -1,6 +1,2 @@
 flows:
   - "tests/**"
-
-platform:
-  android:
-    disableAnimations: true
