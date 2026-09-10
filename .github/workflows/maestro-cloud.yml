@@ -25,3 +25,4 @@ jobs:
           project-id: MAESTRO_PRIJECT_ID
           app-file: app-release.apk
           workspace: maestro
+
