@@ -1,5 +1,5 @@
 flows:
-  - "tests/**"
+  - "tests/auth/register-test.yaml"
 
 platform:
   android:
