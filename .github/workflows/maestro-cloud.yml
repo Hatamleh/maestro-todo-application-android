@@ -20,8 +20,10 @@ jobs:
           ls -lh app-release.apk
       - name: Run the maestro tests
         uses: mobile-dev-inc/action-maestro-cloud@v2.0.2
-        with: 
+        with:
           api-key: "${{secrets.MAESTRO_CLOUD_API_KEY}}"
           project-id: "${{secrets.MAESTRO_PRIJECT_ID}}"
           app-file: app-release.apk
-          
+          workspace: .
+          device-model: pixel_9
+          device_os: android-35
