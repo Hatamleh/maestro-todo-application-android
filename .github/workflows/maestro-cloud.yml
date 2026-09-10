@@ -24,6 +24,5 @@ jobs:
           api-key: "${{secrets.MAESTRO_CLOUD_API_KEY}}"
           project-id: "${{secrets.MAESTRO_PRIJECT_ID}}"
           app-file: app-release.apk
-          workspace: .
           device-model: pixel_9
           device-os: android-35
